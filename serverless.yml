@@ -1,13 +1,13 @@
-service: serverless-continuous-deployment
-frameworkVersion: 3
+service: serverless-continuous-deployment-cm
+frameworkVersion: '3'
 
-provider: 
+provider:
   name: aws
   runtime: nodejs18.x
   region: us-east-1
 
-function:
-  api: 
+functions:
+  api:
     handler: index.handler
     events:
       - httpApi:
