@@ -1,0 +1,19 @@
+{
+  "name": "serverless-cd",
+  "version": "1.0.0",
+  "description": "Hi Del",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lowcheemeng02/serverless-cd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lowcheemeng02/serverless-cd/issues"
+  },
+  "homepage": "https://github.com/lowcheemeng02/serverless-cd#readme"
+}
