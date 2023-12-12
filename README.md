@@ -6,4 +6,4 @@ Pipeline jobs:
 3. install-dependencies: Install the libraries that the Node application needs
 4. deploy: test and deploy node app
 
-The jobs are executed in parallel usually but with the "needs" set up in the repo they are run in sequence
+The jobs are executed in parallel usually but with the "needs" set up in the workflow they are run in sequence
