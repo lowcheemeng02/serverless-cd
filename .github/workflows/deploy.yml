@@ -24,7 +24,7 @@ jobs:
       - run: |
           mysecret=$(aws secretsmanager get-secret-value --secret-id prod/assignment313/secret --region us-east-1 | jq ".SecretString")
           echo $mysecret
-          value=$(echo "$secret" | jq -r '. | fromjson | .cmshamefulsecret')
+          value=$(echo "$mysecret" | jq -r '. | fromjson | .cmshamefulsecret')
           echo $value
 
   install-dependencies:
