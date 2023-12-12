@@ -17,9 +17,17 @@ jobs:
       - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
 
+  read-from-secrets-mgr:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          mysecret=$(aws secretsmanager get-secret-value --secret-id prod/assignment313/secret --region us-east-1 | jq ".SecretString")
+          value=$(echo "$secret" | jq -r '. | fromjson | .cmshamefulsecret')
+          echo "cmshamefulsecret: $value"
+
   install-dependencies:
     runs-on: ubuntu-latest
-    needs: pre-deploy
+    needs: read-from-secrets-mgr
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
